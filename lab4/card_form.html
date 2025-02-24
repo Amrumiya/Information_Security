@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Secure Card Form</title>
+   <style>
+       body {
+           font-family: Arial, sans-serif;
+           background-color: #f7f7f7;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+           margin: 0;
+       }
+       .container {
+           background-color: white;
+           border-radius: 5px;
+           width: 350px;
+           padding: 40px 30px;
+           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+           text-align: center;
+       }
+       h2 {
+           margin-bottom: 20px;
+       }
+       .input-field {
+           width: 100%;
+           padding: 10px;
+           margin: 10px 0;
+           border: 1px solid #dbdbdb;
+           border-radius: 5px;
+           box-sizing: border-box;
+       }
+       .submit-btn {
+           width: 100%;
+           padding: 10px;
+           background-color: #3897f0;
+           color: white;
+           border: none;
+           border-radius: 5px;
+           cursor: pointer;
+       }
+       .submit-btn:hover {
+           background-color: #2980b9;
+       }
+   </style>
+</head>
+<body>
+   <div class="container">
+       <h2>Secure Card Form</h2>
+       <form id="cardForm">
+           <input type="text" class="input-field" name="card_number" placeholder="Card Number" required>
+           <input type="text" class="input-field" name="expiry_date" placeholder="Expiry Date (MM/YY)" required>
+           <input type="text" class="input-field" name="cvv" placeholder="CVV" required>
+           <button type="submit" class="submit-btn">Submit</button>
+       </form>
+   </div>
+   <script>
+       document.getElementById("cardForm").addEventListener("submit", function(event) {
+           event.preventDefault(); // Prevent the default form submission
+
+           const card_number = document.querySelector("input[name='card_number']").value;
+           const expiry_date = document.querySelector("input[name='expiry_date']").value;
+           const cvv = document.querySelector("input[name='cvv']").value;
+
+           // Prepare the data to be sent to the API
+           const data = {
+               card_number: card_number,
+               expiry_date: expiry_date,
+               cvv: cvv
+           };
+
+           // Send the data using fetch to an API
+           fetch('http://localhost:8000/submit', {
+               method: 'POST',
+               headers: {
+                   'Content-Type': 'application/json',
+               },
+               body: JSON.stringify(data),
+           })
+           .then(response => response.json())
+           .then(data => {
+               console.log('Success:', data);
+           })
+           .catch((error) => {
+               console.error('Error:', error);
+           });
+       });
+   </script>
+</body>
+</html>
+
