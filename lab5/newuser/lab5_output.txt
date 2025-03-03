@@ -1,0 +1,2 @@
+newuser:x:1001:1003:Murid,G31,+992 91 732 05 29,unknown,unknown:/home/newuser:/bin/bash
+newuser : newuser sudo
