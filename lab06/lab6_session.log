@@ -1,0 +1,17 @@
+Script started on 2025-03-05 20:02:10+05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+[?2004h]0;murid@Acer: ~/Information_Security/lab06[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab06[00m$ touch file.txt
+[?2004l[?2004h]0;murid@Acer: ~/Information_Security/lab06[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab06[00m$ ls -la file.txt
+[?2004l-rwxr-xr-- 1 murid staff 0 Mar  5 20:02 [0m[01;32mfile.txt[0m
+[?2004h]0;murid@Acer: ~/Information_Security/lab06[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab06[00m$ chmod 754 file.txt
+[?2004l[?2004h]0;murid@Acer: ~/Information_Security/lab06[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab06[00m$ sudo chown alice file.txt
+[?2004l[sudo] password for murid: 
+chown: invalid user: ‘alice’
+[?2004h]0;murid@Acer: ~/Information_Security/lab06[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab06[00m$ sudo chgrp staff file.txt
+[?2004l[?2004h]0;murid@Acer: ~/Information_Security/lab06[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab06[00m$ sudo chown alice:staff file.txt
+[?2004lchown: invalid user: ‘alice:staff’
+[?2004h]0;murid@Acer: ~/Information_Security/lab06[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab06[00m$ ls -la file.txt
+[?2004l-rwxr-xr-- 1 murid staff 0 Mar  5 20:02 [0m[01;32mfile.txt[0m
+[?2004h]0;murid@Acer: ~/Information_Security/lab06[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab06[00m$ exit
+[?2004lexit
+
+Script done on 2025-03-05 20:02:55+05:00 [COMMAND_EXIT_CODE="0"]
