@@ -1,0 +1,129 @@
+Script started on 2025-03-05 21:03:04+05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+[?2004h]0;murid@Acer: ~/Information_Security/lab8[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab8[00m$ sudo apt update
+[?2004l[sudo] password for murid: 
+[33m0% [Working][0m            Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
+[33m0% [Waiting for headers][0m[33m0% [Waiting for headers][0m                        Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+[33m                        0% [Working][0m[33m0% [Waiting for headers][0m                        Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+[33m                        0% [Working][0m[33m0% [Waiting for headers][0m                        Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+[33m                        0% [Working][0m[33m20% [Working][0m             Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 3%Reading package lists... 3%Reading package lists... 4%Reading package lists... 4%Reading package lists... 4%Reading package lists... 4%Reading package lists... 4%Reading package lists... 4%Reading package lists... 33%Reading package lists... 33%Reading package lists... 46%Reading package lists... 46%Reading package lists... 47%Reading package lists... 47%Reading package lists... 47%Reading package lists... 47%Reading package lists... 53%Reading package lists... 53%Reading package lists... 57%Reading package lists... 57%Reading package lists... 60%Reading package lists... 65%Reading package lists... 65%Reading package lists... 70%Reading package lists... 70%Reading package lists... 73%Reading package lists... 73%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 74%Reading package lists... 80%Reading package lists... 80%Reading package lists... 83%Reading package lists... 83%Reading package lists... 91%Reading package lists... 91%Reading package lists... 96%Reading package lists... 96%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+122 packages can be upgraded. Run 'apt list --upgradable' to see them.
+[?2004h]0;murid@Acer: ~/Information_Security/lab8[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab8[00m$ sudo apt install nginx
+[?2004lReading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  libnginx-mod-http-geoip2 libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter libnginx-mod-mail
+  libnginx-mod-stream libnginx-mod-stream-geoip2 nginx-common nginx-core
+Suggested packages:
+  fcgiwrap nginx-doc ssl-cert
+The following NEW packages will be installed:
+  libnginx-mod-http-geoip2 libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter libnginx-mod-mail
+  libnginx-mod-stream libnginx-mod-stream-geoip2 nginx nginx-common nginx-core
+0 upgraded, 9 newly installed, 0 to remove and 122 not upgraded.
+Need to get 697 kB of archives.
+After this operation, 2395 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+[33m0% [Working][0m            Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 nginx-common all 1.18.0-6ubuntu14.6 [40.1 kB]
+[33m1% [1 nginx-common 6850 B/40.1 kB 17%][0m[33m                                      7% [Working][0m            Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-http-geoip2 amd64 1.18.0-6ubuntu14.6 [12.0 kB]
+[33m7% [2 libnginx-mod-http-geoip2 2566 B/12.0 kB 21%][0m[33m                                                  10% [Waiting for headers][0m                         Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-http-image-filter amd64 1.18.0-6ubuntu14.6 [15.5 kB]
+[33m11% [3 libnginx-mod-http-image-filter 1700 B/15.5 kB 11%][0m[33m                                                         14% [Waiting for headers][0m                         Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-http-xslt-filter amd64 1.18.0-6ubuntu14.6 [13.8 kB]
+[33m14% [4 libnginx-mod-http-xslt-filter 170 B/13.8 kB 1%][0m[33m                                                      18% [Waiting for headers][0m                         Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-mail amd64 1.18.0-6ubuntu14.6 [45.8 kB]
+[33m18% [5 libnginx-mod-mail 326 B/45.8 kB 1%][0m[33m                                          26% [Waiting for headers][0m                         Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-stream amd64 1.18.0-6ubuntu14.6 [73.0 kB]
+[33m26% [6 libnginx-mod-stream 99 B/73.0 kB 0%][0m[33m                                           36% [Waiting for headers][0m                         Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-stream-geoip2 amd64 1.18.0-6ubuntu14.6 [10.1 kB]
+[33m37% [7 libnginx-mod-stream-geoip2 2533 B/10.1 kB 25%][0m[33m                                                     40% [Waiting for headers][0m                         Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 nginx-core amd64 1.18.0-6ubuntu14.6 [483 kB]
+[33m40% [8 nginx-core 673 B/483 kB 0%][0m[33m                                  97% [Waiting for headers][0m                         Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 nginx amd64 1.18.0-6ubuntu14.6 [3882 B]
+[33m97% [9 nginx 23 B/3882 B 1%][0m[33m                            100% [Working][0m              Fetched 697 kB in 2s (444 kB/s)
+Preconfiguring packages ...
+
+7[0;29r8[1ASelecting previously unselected package nginx-common.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 24325 files and directories currently installed.)
+Preparing to unpack .../0-nginx-common_1.18.0-6ubuntu14.6_all.deb ...
+7[30;0f[42m[30mProgress: [  0%][49m[39m [..................................................................................................] 87[30;0f[42m[30mProgress: [  3%][49m[39m [##................................................................................................] 8Unpacking nginx-common (1.18.0-6ubuntu14.6) ...
+7[30;0f[42m[30mProgress: [  5%][49m[39m [#####.............................................................................................] 8Selecting previously unselected package libnginx-mod-http-geoip2.
+Preparing to unpack .../1-libnginx-mod-http-geoip2_1.18.0-6ubuntu14.6_amd64.deb ...
+7[30;0f[42m[30mProgress: [  8%][49m[39m [#######...........................................................................................] 8Unpacking libnginx-mod-http-geoip2 (1.18.0-6ubuntu14.6) ...
+7[30;0f[42m[30mProgress: [ 11%][49m[39m [##########........................................................................................] 8Selecting previously unselected package libnginx-mod-http-image-filter.
+Preparing to unpack .../2-libnginx-mod-http-image-filter_1.18.0-6ubuntu14.6_amd64.deb ...
+7[30;0f[42m[30mProgress: [ 14%][49m[39m [#############.....................................................................................] 8Unpacking libnginx-mod-http-image-filter (1.18.0-6ubuntu14.6) ...
+7[30;0f[42m[30mProgress: [ 16%][49m[39m [###############...................................................................................] 8Selecting previously unselected package libnginx-mod-http-xslt-filter.
+Preparing to unpack .../3-libnginx-mod-http-xslt-filter_1.18.0-6ubuntu14.6_amd64.deb ...
+7[30;0f[42m[30mProgress: [ 19%][49m[39m [##################................................................................................] 8Unpacking libnginx-mod-http-xslt-filter (1.18.0-6ubuntu14.6) ...
+7[30;0f[42m[30mProgress: [ 22%][49m[39m [#####################.............................................................................] 8Selecting previously unselected package libnginx-mod-mail.
+Preparing to unpack .../4-libnginx-mod-mail_1.18.0-6ubuntu14.6_amd64.deb ...
+7[30;0f[42m[30mProgress: [ 24%][49m[39m [#######################...........................................................................] 8Unpacking libnginx-mod-mail (1.18.0-6ubuntu14.6) ...
+7[30;0f[42m[30mProgress: [ 27%][49m[39m [##########################........................................................................] 8Selecting previously unselected package libnginx-mod-stream.
+Preparing to unpack .../5-libnginx-mod-stream_1.18.0-6ubuntu14.6_amd64.deb ...
+7[30;0f[42m[30mProgress: [ 30%][49m[39m [#############################.....................................................................] 8Unpacking libnginx-mod-stream (1.18.0-6ubuntu14.6) ...
+7[30;0f[42m[30mProgress: [ 32%][49m[39m [###############################...................................................................] 8Selecting previously unselected package libnginx-mod-stream-geoip2.
+Preparing to unpack .../6-libnginx-mod-stream-geoip2_1.18.0-6ubuntu14.6_amd64.deb ...
+7[30;0f[42m[30mProgress: [ 35%][49m[39m [##################################................................................................] 8Unpacking libnginx-mod-stream-geoip2 (1.18.0-6ubuntu14.6) ...
+7[30;0f[42m[30mProgress: [ 38%][49m[39m [#####################################.............................................................] 8Selecting previously unselected package nginx-core.
+Preparing to unpack .../7-nginx-core_1.18.0-6ubuntu14.6_amd64.deb ...
+7[30;0f[42m[30mProgress: [ 41%][49m[39m [#######################################...........................................................] 8Unpacking nginx-core (1.18.0-6ubuntu14.6) ...
+7[30;0f[42m[30mProgress: [ 43%][49m[39m [##########################################........................................................] 8Selecting previously unselected package nginx.
+Preparing to unpack .../8-nginx_1.18.0-6ubuntu14.6_amd64.deb ...
+7[30;0f[42m[30mProgress: [ 46%][49m[39m [#############################################.....................................................] 8Unpacking nginx (1.18.0-6ubuntu14.6) ...
+7[30;0f[42m[30mProgress: [ 49%][49m[39m [###############################################...................................................] 8Setting up nginx-common (1.18.0-6ubuntu14.6) ...
+7[30;0f[42m[30mProgress: [ 51%][49m[39m [##################################################................................................] 8Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /lib/systemd/system/nginx.service.
+7[30;0f[42m[30mProgress: [ 54%][49m[39m [####################################################..............................................] 8Setting up libnginx-mod-http-xslt-filter (1.18.0-6ubuntu14.6) ...
+7[30;0f[42m[30mProgress: [ 57%][49m[39m [#######################################################...........................................] 87[30;0f[42m[30mProgress: [ 59%][49m[39m [##########################################################........................................] 8Setting up libnginx-mod-http-geoip2 (1.18.0-6ubuntu14.6) ...
+7[30;0f[42m[30mProgress: [ 62%][49m[39m [############################################################......................................] 87[30;0f[42m[30mProgress: [ 65%][49m[39m [###############################################################...................................] 8Setting up libnginx-mod-mail (1.18.0-6ubuntu14.6) ...
+7[30;0f[42m[30mProgress: [ 68%][49m[39m [##################################################################................................] 87[30;0f[42m[30mProgress: [ 70%][49m[39m [####################################################################..............................] 8Setting up libnginx-mod-http-image-filter (1.18.0-6ubuntu14.6) ...
+7[30;0f[42m[30mProgress: [ 73%][49m[39m [#######################################################################...........................] 87[30;0f[42m[30mProgress: [ 76%][49m[39m [##########################################################################........................] 8Setting up libnginx-mod-stream (1.18.0-6ubuntu14.6) ...
+7[30;0f[42m[30mProgress: [ 78%][49m[39m [############################################################################......................] 87[30;0f[42m[30mProgress: [ 81%][49m[39m [###############################################################################...................] 8Setting up libnginx-mod-stream-geoip2 (1.18.0-6ubuntu14.6) ...
+7[30;0f[42m[30mProgress: [ 84%][49m[39m [##################################################################################................] 87[30;0f[42m[30mProgress: [ 86%][49m[39m [####################################################################################..............] 8Setting up nginx-core (1.18.0-6ubuntu14.6) ...
+7[30;0f[42m[30mProgress: [ 89%][49m[39m [#######################################################################################...........] 8 * Upgrading binary nginx       [120G [114G[ OK ]
+7[30;0f[42m[30mProgress: [ 92%][49m[39m [##########################################################################################........] 8Setting up nginx (1.18.0-6ubuntu14.6) ...
+7[30;0f[42m[30mProgress: [ 95%][49m[39m [############################################################################################......] 87[30;0f[42m[30mProgress: [ 97%][49m[39m [###############################################################################################...] 8Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for ufw (0.36.1-4build1) ...
+
+7[0;30r8[1A[J[?2004h]0;murid@Acer: ~/Information_Security/lab8[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab8[00m$ sudo nginx -t
+[?2004lnginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+[?2004h]0;murid@Acer: ~/Information_Security/lab8[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab8[00m$ systemctl status nginx
+[?2004l[?1h=[0;1;32m●[0m nginx.service - A high performance web server and a reverse proxy server[m
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)[m
+     Active: [0;1;32mactive (running)[0m since Wed 2025-03-05 21:03:35 +05; 8s ago[m
+       Docs: man:nginx(8)[m
+    Process: 20234 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)[m
+    Process: 20235 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)[m
+   Main PID: 20337 (nginx)[m
+      Tasks: 13 (limit: 9429)[m
+     Memory: 15.3M[m
+     CGroup: /system.slice/nginx.service[m
+             ├─20337 "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;"[m
+             ├─20339 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m[7m>[27m
+             ├─20340 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m[7m>[27m
+             ├─20341 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m[7m>[27m
+             ├─20342 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m[7m>[27m
+             ├─20343 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m[7m>[27m
+             ├─20344 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m[7m>[27m
+             ├─20345 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m[7m>[27m
+             ├─20346 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m[7m>[27m
+             ├─20347 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m[7m>[27m
+             ├─20348 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m[7m>[27m
+             ├─20349 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m[7m>[27m
+             └─20350 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m[7m>[27m
+[m
+Mar 05 21:03:35 Acer systemd[1]: Starting A high performance web server and a reverse proxy server...[m
+Mar 05 21:03:35 Acer systemd[1]: Started A high performance web server and a reverse proxy server.[m
+[7mlines 1-26/26 (END)[27m[K[K:[K11[K[K[7mlines 1-26/26 (END)[27m[K[K:[K11[K22[K[K[7mlines 1-26/26 (END)[27m[K[K:[K11[K[K[7mlines 1-26/26 (END)[27m[K[K:[K55[K[K[7mlines 1-26/26 (END)[27m[K[Kset mark: [K[7mlines 1-26/26 (END)[27m[K[K[K[7mlines 1-26/26 (END)[27m[K[K[K[7mlines 1-26/26 (END)[27m[K[K[K[7mlines 1-26/26 (END)[27m[K
+[?2004h]0;murid@Acer: ~/Information_Security/lab8[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab8[00m$ [K[?1l>
+[?2004l[?2004h]0;murid@Acer: ~/Information_Security/lab8[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab8[00m$ 
+[?2004l[?2004h]0;murid@Acer: ~/Information_Security/lab8[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab8[00m$ apt-cache depends nginx
+[?2004lnginx
+ |Depends: nginx-core
+ |Depends: nginx-full
+ |Depends: nginx-light
+  Depends: nginx-extras
+ |Depends: nginx-core
+ |Depends: nginx-full
+ |Depends: nginx-light
+  Depends: nginx-extras
+  Breaks: <libnginx-mod-http-lua>
+[?2004h]0;murid@Acer: ~/Information_Security/lab8[01;32mmurid@Acer[00m:[01;34m~/Information_Security/lab8[00m$ exit
+[?2004lexit
+
+Script done on 2025-03-05 21:05:02+05:00 [COMMAND_EXIT_CODE="0"]
