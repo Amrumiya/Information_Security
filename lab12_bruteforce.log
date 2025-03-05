@@ -1,0 +1,228 @@
+Script started on 2025-03-05 21:14:57+05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+[?2004h]0;murid@Acer: ~/Information_Security[01;32mmurid@Acer[00m:[01;34m~/Information_Security[00m$ mkdir brute-force-server
+[?2004le-force-server
+[?2004h]0;murid@Acer: ~/Information_Security[01;32mmurid@Acer[00m:[01;34m~/Information_Security[00m$ cd brute-force-server
+[?2004l[?2004h]0;murid@Acer: ~/Information_Security/brute-force-server[01;32mmurid@Acer[00m:[01;34m~/Information_Security/brute-force-server[00m$ python3 -m venv venv
+[?2004lThe virtual environment was not created successfully because ensurepip is not
+available.  On Debian/Ubuntu systems, you need to install the python3-venv
+package using the following command.
+
+    apt install python3.10-venv
+
+You may need to use sudo with that command.  After installing the python3-venv
+package, recreate your virtual environment.
+
+Failing command: /home/murid/Information_Security/brute-force-server/venv/bin/python3
+
+[?2004h]0;murid@Acer: ~/Information_Security/brute-force-server[01;32mmurid@Acer[00m:[01;34m~/Information_Security/brute-force-server[00m$ apt install python3.10-venv
+[?2004l[1;31mE: [0mCould not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)[0m
+[1;31mE: [0mUnable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?[0m
+[?2004h]0;murid@Acer: ~/Information_Security/brute-force-server[01;32mmurid@Acer[00m:[01;34m~/Information_Security/brute-force-server[00m$ sudo apt install python3.10-venv
+[?2004l[sudo] password for murid: 
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  libpython3.10 libpython3.10-minimal libpython3.10-stdlib python3-distutils python3-lib2to3 python3-pip-whl
+  python3-setuptools-whl python3.10 python3.10-minimal
+Suggested packages:
+  python3.10-doc binfmt-support
+The following NEW packages will be installed:
+  python3-distutils python3-lib2to3 python3-pip-whl python3-setuptools-whl python3.10-venv
+The following packages will be upgraded:
+  libpython3.10 libpython3.10-minimal libpython3.10-stdlib python3.10 python3.10-minimal
+5 upgraded, 5 newly installed, 0 to remove and 117 not upgraded.
+Need to get 2690 kB/10.1 MB of archives.
+After this operation, 4109 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+[33m69% [Working][0m             Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-lib2to3 all 3.10.8-1~22.04 [77.6 kB]
+[33m69% [1 python3-lib2to3 1137 B/77.6 kB 1%][0m[33m69% [1 python3-lib2to3 65.4 kB/77.6 kB 84%][0m[33m                                           71% [Working][0m             Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-distutils all 3.10.8-1~22.04 [139 kB]
+[33m71% [2 python3-distutils 2564 B/139 kB 2%][0m[33m                                          74% [Waiting for headers][0m                         Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 python3-pip-whl all 22.0.2+dfsg-1ubuntu0.5 [1680 kB]
+[33m74% [3 python3-pip-whl 1924 B/1680 kB 0%][0m[33m79% [3 python3-pip-whl 527 kB/1680 kB 31%][0m[33m                                          90% [Waiting for headers][0m                         Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 python3-setuptools-whl all 59.6.0-1.2ubuntu0.22.04.2 [788 kB]
+[33m90% [4 python3-setuptools-whl 55.4 kB/788 kB 7%][0m[33m                                                98% [Waiting for headers][0m                         Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 python3.10-venv amd64 3.10.12-1~22.04.9 [5722 B]
+[33m                         100% [Working][0m              Fetched 2690 kB in 3s (1056 kB/s)
+
+7[0;29r8[1A(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 24433 files and directories currently installed.)
+Preparing to unpack .../0-libpython3.10_3.10.12-1~22.04.9_amd64.deb ...
+7[30;0f[42m[30mProgress: [  0%][49m[39m [..................................................................................................] 87[30;0f[42m[30mProgress: [  2%][49m[39m [##................................................................................................] 8Unpacking libpython3.10:amd64 (3.10.12-1~22.04.9) over (3.10.12-1~22.04.3) ...
+7[30;0f[42m[30mProgress: [  5%][49m[39m [####..............................................................................................] 8Preparing to unpack .../1-python3.10_3.10.12-1~22.04.9_amd64.deb ...
+7[30;0f[42m[30mProgress: [  7%][49m[39m [#######...........................................................................................] 8Unpacking python3.10 (3.10.12-1~22.04.9) over (3.10.12-1~22.04.3) ...
+7[30;0f[42m[30mProgress: [ 10%][49m[39m [#########.........................................................................................] 8Preparing to unpack .../2-libpython3.10-stdlib_3.10.12-1~22.04.9_amd64.deb ...
+7[30;0f[42m[30mProgress: [ 12%][49m[39m [###########.......................................................................................] 8Unpacking libpython3.10-stdlib:amd64 (3.10.12-1~22.04.9) over (3.10.12-1~22.04.3) ...
+7[30;0f[42m[30mProgress: [ 15%][49m[39m [##############....................................................................................] 8Preparing to unpack .../3-python3.10-minimal_3.10.12-1~22.04.9_amd64.deb ...
+7[30;0f[42m[30mProgress: [ 17%][49m[39m [################..................................................................................] 8Unpacking python3.10-minimal (3.10.12-1~22.04.9) over (3.10.12-1~22.04.3) ...
+7[30;0f[42m[30mProgress: [ 20%][49m[39m [###################...............................................................................] 8Preparing to unpack .../4-libpython3.10-minimal_3.10.12-1~22.04.9_amd64.deb ...
+7[30;0f[42m[30mProgress: [ 22%][49m[39m [#####################.............................................................................] 8Unpacking libpython3.10-minimal:amd64 (3.10.12-1~22.04.9) over (3.10.12-1~22.04.3) ...
+7[30;0f[42m[30mProgress: [ 24%][49m[39m [#######################...........................................................................] 8Selecting previously unselected package python3-lib2to3.
+Preparing to unpack .../5-python3-lib2to3_3.10.8-1~22.04_all.deb ...
+7[30;0f[42m[30mProgress: [ 27%][49m[39m [##########################........................................................................] 8Unpacking python3-lib2to3 (3.10.8-1~22.04) ...
+7[30;0f[42m[30mProgress: [ 29%][49m[39m [############################......................................................................] 8Selecting previously unselected package python3-distutils.
+Preparing to unpack .../6-python3-distutils_3.10.8-1~22.04_all.deb ...
+7[30;0f[42m[30mProgress: [ 32%][49m[39m [###############################...................................................................] 8Unpacking python3-distutils (3.10.8-1~22.04) ...
+7[30;0f[42m[30mProgress: [ 34%][49m[39m [#################################.................................................................] 8Selecting previously unselected package python3-pip-whl.
+Preparing to unpack .../7-python3-pip-whl_22.0.2+dfsg-1ubuntu0.5_all.deb ...
+7[30;0f[42m[30mProgress: [ 37%][49m[39m [###################################...............................................................] 8Unpacking python3-pip-whl (22.0.2+dfsg-1ubuntu0.5) ...
+7[30;0f[42m[30mProgress: [ 39%][49m[39m [######################################............................................................] 8Selecting previously unselected package python3-setuptools-whl.
+Preparing to unpack .../8-python3-setuptools-whl_59.6.0-1.2ubuntu0.22.04.2_all.deb ...
+7[30;0f[42m[30mProgress: [ 41%][49m[39m [########################################..........................................................] 8Unpacking python3-setuptools-whl (59.6.0-1.2ubuntu0.22.04.2) ...
+7[30;0f[42m[30mProgress: [ 44%][49m[39m [###########################################.......................................................] 8Selecting previously unselected package python3.10-venv.
+Preparing to unpack .../9-python3.10-venv_3.10.12-1~22.04.9_amd64.deb ...
+7[30;0f[42m[30mProgress: [ 46%][49m[39m [#############################################.....................................................] 8Unpacking python3.10-venv (3.10.12-1~22.04.9) ...
+7[30;0f[42m[30mProgress: [ 49%][49m[39m [###############################################...................................................] 8Setting up python3-setuptools-whl (59.6.0-1.2ubuntu0.22.04.2) ...
+7[30;0f[42m[30mProgress: [ 51%][49m[39m [##################################################................................................] 87[30;0f[42m[30mProgress: [ 54%][49m[39m [####################################################..............................................] 8Setting up python3-pip-whl (22.0.2+dfsg-1ubuntu0.5) ...
+7[30;0f[42m[30mProgress: [ 56%][49m[39m [######################################################............................................] 87[30;0f[42m[30mProgress: [ 59%][49m[39m [#########################################################.........................................] 8Setting up libpython3.10-minimal:amd64 (3.10.12-1~22.04.9) ...
+7[30;0f[42m[30mProgress: [ 61%][49m[39m [###########################################################.......................................] 87[30;0f[42m[30mProgress: [ 63%][49m[39m [##############################################################....................................] 8Setting up python3-lib2to3 (3.10.8-1~22.04) ...
+7[30;0f[42m[30mProgress: [ 66%][49m[39m [################################################################..................................] 87[30;0f[42m[30mProgress: [ 68%][49m[39m [##################################################################................................] 8Setting up python3-distutils (3.10.8-1~22.04) ...
+7[30;0f[42m[30mProgress: [ 71%][49m[39m [#####################################################################.............................] 87[30;0f[42m[30mProgress: [ 73%][49m[39m [#######################################################################...........................] 8Setting up python3.10-minimal (3.10.12-1~22.04.9) ...
+7[30;0f[42m[30mProgress: [ 76%][49m[39m [##########################################################################........................] 87[30;0f[42m[30mProgress: [ 78%][49m[39m [############################################################################......................] 8Setting up libpython3.10-stdlib:amd64 (3.10.12-1~22.04.9) ...
+7[30;0f[42m[30mProgress: [ 80%][49m[39m [##############################################################################....................] 87[30;0f[42m[30mProgress: [ 83%][49m[39m [#################################################################################.................] 8Setting up libpython3.10:amd64 (3.10.12-1~22.04.9) ...
+7[30;0f[42m[30mProgress: [ 85%][49m[39m [###################################################################################...............] 87[30;0f[42m[30mProgress: [ 88%][49m[39m [######################################################################################............] 8Setting up python3.10 (3.10.12-1~22.04.9) ...
+7[30;0f[42m[30mProgress: [ 90%][49m[39m [########################################################################################..........] 87[30;0f[42m[30mProgress: [ 93%][49m[39m [##########################################################################################........] 8Setting up python3.10-venv (3.10.12-1~22.04.9) ...
+7[30;0f[42m[30mProgress: [ 95%][49m[39m [#############################################################################################.....] 87[30;0f[42m[30mProgress: [ 98%][49m[39m [###############################################################################################...] 8Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.8) ...
+
+7[0;30r8[1A[J[?2004h]0;murid@Acer: ~/Information_Security/brute-force-server[01;32mmurid@Acer[00m:[01;34m~/Information_Security/brute-force-server[00m$ source venv/bin/activate
+[?2004lbash: venv/bin/activate: No such file or directory
+[?2004h]0;murid@Acer: ~/Information_Security/brute-force-server[01;32mmurid@Acer[00m:[01;34m~/Information_Security/brute-force-server[00m$ pip install "fastapi[standard]"
+[?2004lCommand 'pip' not found, but can be installed with:
+sudo apt install python3-pip
+[?2004h]0;murid@Acer: ~/Information_Security/brute-force-server[01;32mmurid@Acer[00m:[01;34m~/Information_Security/brute-force-server[00m$ sudo apth[K intall python3-pip
+[?2004l[1;31mE: [0mInvalid operation intall[0m
+[?2004h]0;murid@Acer: ~/Information_Security/brute-force-server[01;32mmurid@Acer[00m:[01;34m~/Information_Security/brute-force-server[00m$ nano main.py
+[?2004l[?2004h[?1049h[22;0;0t[1;30r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[28;55H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 6.2                                             main.py                                                      [1;119H(B[m[29d(B[0;7m^G(B[m Help[29;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[29;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[106G(B[0;7mM-A(B[m Set Mark[30d(B[0;7m^X(B[m Exit[30;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy[2d[?12l[?25h[?25l[1;68H(B[0;7m*[119G(B[m[?12l[?25h[2d(B[0;1m[36mfrom[39m(B[m typ[?25ling (B[0;1m[36mimport[39m(B[m Annotated[28d[K[3d[?12l[?25h(B[0;1m[36mfrom[39m(B[m fastapi (B[0;1m[36mimport[39m(B[m FastAPI, F[?25lorm[5d[?12l[?25happ = Fas[?25l[?12l[?25htAPI([?25l)[7d[?12l[?25hAD[?25l[?12l[?25hMIN_USER[?25l[?12l[?25hNAME[?25l[?12l[?25h = "ad[?25l(B[0;1m[32m"admin"[8d[39m(B[m[?12l[?25hADMIN[?25l[?12l[?25h_PAS[?25l[?12l[?25hSWORD = "1[?25l[?12l[?25h2345admi[?25l[8;18H(B[0;1m[32m"12345admin"[10d[39m(B[m[?12l[?25h@app.post([?25l[?12l[?25h"/logi[?25l[11G(B[0;1m[32m"/login"[39m(B[m)[11d[?12l[?25h(B[0;1m[36mdef[34m login[39m(B[m([?25l[12d[?12l[?25h   username:[42m [49m(B[m[?25l[?12l[?25h Annotated[str,[42m [49m(B[m[?25l[?12l[?25h Form()[?25l],[13d[?12l[?25h   p[?25l[?12l[?25hassword: Annot[?25l[?12l[?25hated[str[?25l[?12l[?25h, Form([?25l)][14d[?12l[?25h):[?25l[15d[?12l[?25h   (B[0;1m[36mif(B[0m[42m [49m(B[m[?25l[?12l[?25h username == AD[?25l[?12l[?25hMIN_[?25l[?12l[?25hUSERNAME[?25l[?12l[?25h (B[0;1m[36mand[39m(B[m pas[?25l[?12l[?25hsword ==[?25l[?12l[?25h ADMI[?25l[?12l[?25hN_PA[?25l[?12l[?25hSSWO[?25lRD:[16d[?12l[?25h[?25l[?12l[?25h[8G(B[0;1m[36mreturn[39m(B[m "[?25l(B[0;1m[32m"secret token"[17d[39m(B[m[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h   (B[0;1m[36mreturn[39m(B[m[?25l[?12l[?25h "Inva[?25l[?12l[?25hlid cred[?25l[17;11H(B[0;1m[32m"Invalid credentials"[18d[39m(B[m[?12l[?25h[?25l[28d(B[0;7mSave modified buffer?                                                                                                   [29;1H Y(B[m Yes[K[30d(B[0;7m N(B[m No  [30;16H (B[0;7m^C(B[m Cancel[K[28;23H[?12l[?25h[?25l[29d(B[0;7m^G(B[m Help[29;31H(B[0;7mM-D(B[m DOS Format[29;61H(B[0;7mM-A(B[m Append[29;91H(B[0;7mM-B(B[m Backup File[30d(B[0;7m^C(B[m Cancel[17G[14X[30;31H(B[0;7mM-M(B[m Mac Format[30;61H(B[0;7mM-P(B[m Prepend[30;91H(B[0;7m^T(B[m Browse[28d(B[0;7mFile Name to Write: main.py(B[m[?12l[?25h[?25l[28;53H[1K (B[0;7m[ Writing... ](B[m[K[1;68H(B[0;7m [119G(B[m[28;52H(B[0;7m[ Wrote 17 lines ](B[m[J[30d[?12l[?25h[30;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;murid@Acer: ~/Information_Security/brute-force-server[01;32mmurid@Acer[00m:[01;34m~/Information_Security/brute-force-server[00m$ fastapi dev main.py
+[?2004lfastapi: command not found
+[?2004h]0;murid@Acer: ~/Information_Security/brute-force-server[01;32mmurid@Acer[00m:[01;34m~/Information_Security/brute-force-server[00m$ rm -rf venv
+[?2004lon3 -m venv venv
+[?2004h]0;murid@Acer: ~/Information_Security/brute-force-server[01;32mmurid@Acer[00m:[01;34m~/Information_Security/brute-force-server[00m$ python3 -m venv venv
+[?2004l[?2004h]0;murid@Acer: ~/Information_Security/brute-force-server[01;32mmurid@Acer[00m:[01;34m~/Information_Security/brute-force-server[00m$ source venv/bin/activate
+[?2004l[?2004h(venv) ]0;murid@Acer: ~/Information_Security/brute-force-server[01;32mmurid@Acer[00m:[01;34m~/Information_Security/brute-force-server[00m$ sudo apt install python3-pip ✅
+[?2004lReading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+[1;31mE: [0mUnable to locate package ✅[0m
+[?2004h(venv) ]0;murid@Acer: ~/Information_Security/brute-force-server[01;32mmurid@Acer[00m:[01;34m~/Information_Security/brute-force-server[00m$ pip --version
+[?2004lpip 22.0.2 from /home/murid/Information_Security/brute-force-server/venv/lib/python3.10/site-packages/pip (python 3.10)
+[?2004h(venv) ]0;murid@Acer: ~/Information_Security/brute-force-server[01;32mmurid@Acer[00m:[01;34m~/Information_Security/brute-force-server[00m$ pip install "fastapi[standard]"
+[?2004lCollecting fastapi[standard]
+  Downloading fastapi-0.115.11-py3-none-any.whl (94 kB)
+[?25l     [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/94.9 KB[0m [31m?[0m eta [36m-:--:--[0m[2K     [38;5;204m━━━━━━━━━━━━[0m[38;5;204m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m30.7/94.9 KB[0m [31m764.4 kB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━━━━━[0m[38;5;204m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m30.7/94.9 KB[0m [31m764.4 kB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;204m╸[0m[38;5;237m━━━━━━━━━━━━━━[0m [32m61.4/94.9 KB[0m [31m502.3 kB/s[0m eta [36m0:00:01[0m[2K     [38;5;107m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m94.9/94.9 KB[0m [31m657.2 kB/s[0m eta [36m0:00:00[0m
+[?25hCollecting starlette<0.47.0,>=0.40.0
+  Downloading starlette-0.46.0-py3-none-any.whl (71 kB)
+[?25l     [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/72.0 KB[0m [31m?[0m eta [36m-:--:--[0m[2K     [38;5;107m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m72.0/72.0 KB[0m [31m2.9 MB/s[0m eta [36m0:00:00[0m
+[?25hCollecting typing-extensions>=4.8.0
+  Downloading typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+Collecting pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4
+  Downloading pydantic-2.10.6-py3-none-any.whl (431 kB)
+[?25l     [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/431.7 KB[0m [31m?[0m eta [36m-:--:--[0m[2K     [38;5;204m━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m102.4/431.7 KB[0m [31m3.0 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m143.4/431.7 KB[0m [31m3.4 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━━━━━━━━━━━━━[0m[38;5;204m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━[0m [32m225.3/431.7 KB[0m [31m2.2 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;204m╸[0m [32m430.1/431.7 KB[0m [31m3.2 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;107m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m431.7/431.7 KB[0m [31m3.0 MB/s[0m eta [36m0:00:00[0m
+[?25hCollecting httpx>=0.23.0
+  Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+[?25l     [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/73.5 KB[0m [31m?[0m eta [36m-:--:--[0m[2K     [38;5;107m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m73.5/73.5 KB[0m [31m11.3 MB/s[0m eta [36m0:00:00[0m
+[?25hCollecting uvicorn[standard]>=0.12.0
+  Downloading uvicorn-0.34.0-py3-none-any.whl (62 kB)
+[?25l     [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/62.3 KB[0m [31m?[0m eta [36m-:--:--[0m[2K     [38;5;107m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m62.3/62.3 KB[0m [31m8.9 MB/s[0m eta [36m0:00:00[0m
+[?25hCollecting email-validator>=2.0.0
+  Downloading email_validator-2.2.0-py3-none-any.whl (33 kB)
+Collecting jinja2>=3.1.5
+  Downloading jinja2-3.1.5-py3-none-any.whl (134 kB)
+[?25l     [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/134.6 KB[0m [31m?[0m eta [36m-:--:--[0m[2K     [38;5;107m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m134.6/134.6 KB[0m [31m9.8 MB/s[0m eta [36m0:00:00[0m
+[?25hCollecting fastapi-cli[standard]>=0.0.5
+  Downloading fastapi_cli-0.0.7-py3-none-any.whl (10 kB)
+Collecting python-multipart>=0.0.18
+  Downloading python_multipart-0.0.20-py3-none-any.whl (24 kB)
+Collecting idna>=2.0.0
+  Downloading idna-3.10-py3-none-any.whl (70 kB)
+[?25l     [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/70.4 KB[0m [31m?[0m eta [36m-:--:--[0m[2K     [38;5;107m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m70.4/70.4 KB[0m [31m10.8 MB/s[0m eta [36m0:00:00[0m
+[?25hCollecting dnspython>=2.0.0
+  Downloading dnspython-2.7.0-py3-none-any.whl (313 kB)
+[?25l     [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/313.6 KB[0m [31m?[0m eta [36m-:--:--[0m[2K     [38;5;107m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m313.6/313.6 KB[0m [31m10.3 MB/s[0m eta [36m0:00:00[0m
+[?25hCollecting typer>=0.12.3
+  Downloading typer-0.15.2-py3-none-any.whl (45 kB)
+[?25l     [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/45.1 KB[0m [31m?[0m eta [36m-:--:--[0m[2K     [38;5;107m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m45.1/45.1 KB[0m [31m7.6 MB/s[0m eta [36m0:00:00[0m
+[?25hCollecting rich-toolkit>=0.11.1
+  Downloading rich_toolkit-0.13.2-py3-none-any.whl (13 kB)
+Collecting certifi
+  Downloading certifi-2025.1.31-py3-none-any.whl (166 kB)
+[?25l     [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/166.4 KB[0m [31m?[0m eta [36m-:--:--[0m[2K     [38;5;107m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m166.4/166.4 KB[0m [31m11.7 MB/s[0m eta [36m0:00:00[0m
+[?25hCollecting httpcore==1.*
+  Downloading httpcore-1.0.7-py3-none-any.whl (78 kB)
+[?25l     [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/78.6 KB[0m [31m?[0m eta [36m-:--:--[0m[2K     [38;5;107m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m78.6/78.6 KB[0m [31m8.5 MB/s[0m eta [36m0:00:00[0m
+[?25hCollecting anyio
+  Downloading anyio-4.8.0-py3-none-any.whl (96 kB)
+[?25l     [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/96.0 KB[0m [31m?[0m eta [36m-:--:--[0m[2K     [38;5;107m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m96.0/96.0 KB[0m [31m10.0 MB/s[0m eta [36m0:00:00[0m
+[?25hCollecting h11<0.15,>=0.13
+  Downloading h11-0.14.0-py3-none-any.whl (58 kB)
+[?25l     [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/58.3 KB[0m [31m?[0m eta [36m-:--:--[0m[2K     [38;5;107m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m58.3/58.3 KB[0m [31m6.6 MB/s[0m eta [36m0:00:00[0m
+[?25hCollecting MarkupSafe>=2.0
+  Downloading MarkupSafe-3.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (20 kB)
+Collecting annotated-types>=0.6.0
+  Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+Collecting pydantic-core==2.27.2
+  Downloading pydantic_core-2.27.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+[?25l     [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/2.0 MB[0m [31m?[0m eta [36m-:--:--[0m[2K     [38;5;204m━━━━━━━━[0m[38;5;204m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.4/2.0 MB[0m [31m13.0 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━[0m[38;5;204m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.4/2.0 MB[0m [31m13.0 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━[0m[38;5;204m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.4/2.0 MB[0m [31m13.0 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━[0m[38;5;204m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.4/2.0 MB[0m [31m13.0 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━[0m[38;5;204m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.4/2.0 MB[0m [31m13.0 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━[0m[38;5;204m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.4/2.0 MB[0m [31m13.0 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━[0m [32m1.8/2.0 MB[0m [31m7.9 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━[0m [32m1.8/2.0 MB[0m [31m7.9 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;204m╸[0m[38;5;237m━━━[0m [32m1.8/2.0 MB[0m [31m5.9 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;107m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m2.0/2.0 MB[0m [31m5.9 MB/s[0m eta [36m0:00:00[0m
+[?25hCollecting click>=7.0
+  Downloading click-8.1.8-py3-none-any.whl (98 kB)
+[?25l     [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/98.2 KB[0m [31m?[0m eta [36m-:--:--[0m[2K     [38;5;107m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m98.2/98.2 KB[0m [31m4.5 MB/s[0m eta [36m0:00:00[0m
+[?25hCollecting python-dotenv>=0.13
+  Downloading python_dotenv-1.0.1-py3-none-any.whl (19 kB)
+Collecting watchfiles>=0.13
+  Downloading watchfiles-1.0.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (452 kB)
+[?25l     [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/452.9 KB[0m [31m?[0m eta [36m-:--:--[0m[2K     [38;5;204m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m389.1/452.9 KB[0m [31m11.5 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;107m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m452.9/452.9 KB[0m [31m10.1 MB/s[0m eta [36m0:00:00[0m
+[?25hCollecting websockets>=10.4
+  Downloading websockets-15.0-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (180 kB)
+[?25l     [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/180.9 KB[0m [31m?[0m eta [36m-:--:--[0m[2K     [38;5;107m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m180.9/180.9 KB[0m [31m6.3 MB/s[0m eta [36m0:00:00[0m
+[?25hCollecting uvloop!=0.15.0,!=0.15.1,>=0.14.0
+  Downloading uvloop-0.21.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.8 MB)
+[?25l     [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/3.8 MB[0m [31m?[0m eta [36m-:--:--[0m[2K     [38;5;204m━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.4/3.8 MB[0m [31m13.0 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━[0m[38;5;204m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.7/3.8 MB[0m [31m11.6 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━[0m[38;5;204m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.8/3.8 MB[0m [31m9.0 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━━━━━[0m[38;5;204m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.2/3.8 MB[0m [31m8.9 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.5/3.8 MB[0m [31m9.2 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━━━━━━━━━━━[0m[38;5;204m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━[0m [32m1.8/3.8 MB[0m [31m8.7 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;204m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━[0m [32m2.2/3.8 MB[0m [31m9.0 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━[0m [32m2.4/3.8 MB[0m [31m8.8 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━[0m [32m2.8/3.8 MB[0m [31m9.0 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;204m╸[0m[38;5;237m━━━━━━━[0m [32m3.1/3.8 MB[0m [31m9.0 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━[0m [32m3.5/3.8 MB[0m [31m9.0 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;204m╸[0m [32m3.8/3.8 MB[0m [31m9.2 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;107m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.8/3.8 MB[0m [31m8.8 MB/s[0m eta [36m0:00:00[0m
+[?25hCollecting pyyaml>=5.1
+  Downloading PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (751 kB)
+[?25l     [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/751.2 KB[0m [31m?[0m eta [36m-:--:--[0m[2K     [38;5;204m━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━[0m [32m399.4/751.2 KB[0m [31m14.1 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;204m╸[0m[38;5;237m━[0m [32m727.0/751.2 KB[0m [31m12.4 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;107m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m751.2/751.2 KB[0m [31m9.5 MB/s[0m eta [36m0:00:00[0m
+[?25hCollecting httptools>=0.6.3
+  Downloading httptools-0.6.4-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (442 kB)
+[?25l     [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/442.1 KB[0m [31m?[0m eta [36m-:--:--[0m[2K     [38;5;204m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━[0m [32m358.4/442.1 KB[0m [31m10.8 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;107m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m442.1/442.1 KB[0m [31m9.5 MB/s[0m eta [36m0:00:00[0m
+[?25hCollecting sniffio>=1.1
+  Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+Collecting exceptiongroup>=1.0.2
+  Downloading exceptiongroup-1.2.2-py3-none-any.whl (16 kB)
+Collecting rich>=13.7.1
+  Downloading rich-13.9.4-py3-none-any.whl (242 kB)
+[?25l     [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/242.4 KB[0m [31m?[0m eta [36m-:--:--[0m[2K     [38;5;107m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m242.4/242.4 KB[0m [31m7.0 MB/s[0m eta [36m0:00:00[0m
+[?25hCollecting shellingham>=1.3.0
+  Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+Collecting pygments<3.0.0,>=2.13.0
+  Downloading pygments-2.19.1-py3-none-any.whl (1.2 MB)
+[?25l     [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/1.2 MB[0m [31m?[0m eta [36m-:--:--[0m[2K     [38;5;204m━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.4/1.2 MB[0m [31m12.0 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━[0m [32m0.8/1.2 MB[0m [31m11.7 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;204m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━[0m [32m1.0/1.2 MB[0m [31m10.0 MB/s[0m eta [36m0:00:01[0m[2K     [38;5;107m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.2/1.2 MB[0m [31m9.0 MB/s[0m eta [36m0:00:00[0m
+[?25hCollecting markdown-it-py>=2.2.0
+  Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+[?25l     [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/87.5 KB[0m [31m?[0m eta [36m-:--:--[0m[2K     [38;5;107m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m87.5/87.5 KB[0m [31m12.6 MB/s[0m eta [36m0:00:00[0m
+[?25hCollecting mdurl~=0.1
+  Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Installing collected packages: websockets, uvloop, typing-extensions, sniffio, shellingham, pyyaml, python-multipart, python-dotenv, pygments, mdurl, MarkupSafe, idna, httptools, h11, exceptiongroup, dnspython, click, certifi, annotated-types, uvicorn, pydantic-core, markdown-it-py, jinja2, httpcore, email-validator, anyio, watchfiles, starlette, rich, pydantic, httpx, typer, rich-toolkit, fastapi, fastapi-cli
+Successfully installed MarkupSafe-3.0.2 annotated-types-0.7.0 anyio-4.8.0 certifi-2025.1.31 click-8.1.8 dnspython-2.7.0 email-validator-2.2.0 exceptiongroup-1.2.2 fastapi-0.115.11 fastapi-cli-0.0.7 h11-0.14.0 httpcore-1.0.7 httptools-0.6.4 httpx-0.28.1 idna-3.10 jinja2-3.1.5 markdown-it-py-3.0.0 mdurl-0.1.2 pydantic-2.10.6 pydantic-core-2.27.2 pygments-2.19.1 python-dotenv-1.0.1 python-multipart-0.0.20 pyyaml-6.0.2 rich-13.9.4 rich-toolkit-0.13.2 shellingham-1.5.4 sniffio-1.3.1 starlette-0.46.0 typer-0.15.2 typing-extensions-4.12.2 uvicorn-0.34.0 uvloop-0.21.0 watchfiles-1.0.4 websockets-15.0
+[?2004h(venv) ]0;murid@Acer: ~/Information_Security/brute-force-server[01;32mmurid@Acer[00m:[01;34m~/Information_Security/brute-force-server[00m$ pip install uvicorn
+[?2004lRequirement already satisfied: uvicorn in ./venv/lib/python3.10/site-packages (0.34.0)
+Requirement already satisfied: typing-extensions>=4.0 in ./venv/lib/python3.10/site-packages (from uvicorn) (4.12.2)
+Requirement already satisfied: click>=7.0 in ./venv/lib/python3.10/site-packages (from uvicorn) (8.1.8)
+Requirement already satisfied: h11>=0.8 in ./venv/lib/python3.10/site-packages (from uvicorn) (0.14.0)
+[?2004h(venv) ]0;murid@Acer: ~/Information_Security/brute-force-server[01;32mmurid@Acer[00m:[01;34m~/Information_Security/brute-force-server[00m$ uvicorn main:app --reload
+[?2004l[32mINFO[0m:     Will watch for changes in these directories: ['/home/murid/Information_Security/brute-force-server']
+[32mINFO[0m:     Uvicorn running on [1mhttp://127.0.0.1:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     Started reloader process [[36m[1m25420[0m] using [36m[1mWatchFiles[0m
+[32mINFO[0m:     Started server process [[36m25423[0m]
+[32mINFO[0m:     Waiting for application startup.
+[32mINFO[0m:     Application startup complete.
+pip list | grep fastapi
+pip list | grep uvicorn
+
+
+
+^C[32mINFO[0m:     Shutting down
+[32mINFO[0m:     Waiting for application shutdown.
+[32mINFO[0m:     Application shutdown complete.
+[32mINFO[0m:     Finished server process [[36m25423[0m]
+[32mINFO[0m:     Stopping reloader process [[36m[1m25420[0m]
+[?2004h(venv) ]0;murid@Acer: ~/Information_Security/brute-force-server[01;32mmurid@Acer[00m:[01;34m~/Information_Security/brute-force-server[00m$ 
+[?2004l[?2004h(venv) ]0;murid@Acer: ~/Information_Security/brute-force-server[01;32mmurid@Acer[00m:[01;34m~/Information_Security/brute-force-server[00m$ 
+[?2004l[?2004h(venv) ]0;murid@Acer: ~/Information_Security/brute-force-server[01;32mmurid@Acer[00m:[01;34m~/Information_Security/brute-force-server[00m$ exit
+[?2004lexit
+
+Script done on 2025-03-05 21:20:36+05:00 [COMMAND_EXIT_CODE="0"]
