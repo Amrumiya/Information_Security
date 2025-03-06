@@ -1,0 +1,5 @@
+s lab focused on understanding and modifying Linux file permissions to control read (r), write (w), and execute (x) access for the owner, group, and others. We created a sample file using touch file.txt and checked its default permissions with ls -la. We then used chmod to modify permissions numerically (e.g., chmod 754 file.txt), and chown to change the file owner. Additionally, chgrp was used to assign a specific group to the file.
+
+Through this exercise, we learned the importance of restricting file access to enhance security. Changing file ownership using sudo chown newowner file.txt allowed us to transfer control, while modifying group ownership helped manage shared access among users. Understanding permission structures in Linux is essential for system security and preventing unauthorized modifications.
+
+
