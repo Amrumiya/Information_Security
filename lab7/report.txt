@@ -1,0 +1,3 @@
+s lab, we explored task automation using Crontab, a utility for scheduling repetitive tasks in Linux. We first created a shell script (write_line.sh) that appends a timestamp to a file and scheduled it to run every minute using crontab -e. By verifying the contents of file.txt, we confirmed that the script was executing as expected. We also reviewed crontab commands like crontab -l to list scheduled jobs and crontab -r to remove them.
+
+This lab demonstrated the power of automation in Linux, allowing us to schedule system maintenance, log updates, and automated backups. Automating routine tasks improves system efficiency, reduces manual intervention, and ensures scheduled execution even when the user is not actively running the commands.

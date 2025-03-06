@@ -1,0 +1,5 @@
+n this lab, we installed and configured NGINX, a powerful web server and reverse proxy. We created a configuration file in /etc/nginx/sites-available/ to serve a custom HTML page on port 8000. After enabling the configuration using a symbolic link in /etc/nginx/sites-enabled/, we tested the setup by reloading NGINX and accessing the page in a browser.
+
+Additionally, we explored using proxy_pass to forward requests to a backend API running on port 5000. This demonstrated how NGINX can act as a reverse proxy, improving security, load balancing, and request management. Understanding NGINX configuration is essential for deploying scalable and efficient web applications.
+
+

@@ -1,0 +1,3 @@
+s lab introduced the Vim text editor, one of the most powerful terminal-based editors in Linux. We learned about different modes in Vim: normal mode (for navigation), insert mode (for text entry), visual mode (for selecting text), and command mode (for executing operations). We practiced basic commands such as entering insert mode with i, saving a file with :w, quitting with :q, and deleting text using dd.
+
+This exercise helped us improve our efficiency in handling files directly from the terminal, which is essential for server management and scripting. Learning Vim is particularly useful when working with remote servers where graphical editors are unavailable. The ability to navigate and edit files quickly using keyboard shortcuts significantly enhances productivity.
